@@ -36,6 +36,7 @@ namespace ICSharpCode.Decompiler.Tests
 		[Test]
 		public void AllFilesHaveTests()
 		{
+			Assert.Fail("Test fail");
 			var testNames = typeof(PrettyTestRunner).GetMethods()
 				.Where(m => m.GetCustomAttributes(typeof(TestAttribute), false).Any())
 				.Select(m => m.Name)
